@@ -266,3 +266,540 @@
   </footer>
 </body>
 </html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Book your home cleaning service online. Fill out our form for Standard, Deep, Move-In/Out, or Eco-Friendly cleaning and we'll contact you within 24 hours." />
+  <meta name="keywords" content="cleaning service booking, book cleaning, home cleaning appointment, cleaning service near me, JV Home Cleaning booking" />
+  <meta name="author" content="JV Home Cleaning Services" />
+  <meta name="robots" content="index, follow" />
+  <title>Book Cleaning Service | JV Home Cleaning Services</title>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <style>
+    /* Reset & Base Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Open Sans', sans-serif;
+      background-color: #f5f7fa;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    /* Layout */
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 15px;
+    }
+
+    /* Header */
+    .page-header {
+      text-align: center;
+      padding: 60px 0 40px;
+      background-color: #fff;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    }
+
+    .page-header h1 {
+      font-size: 2.2rem;
+      color: #333;
+      margin-bottom: 15px;
+    }
+
+    .page-header p {
+      font-size: 1.1rem;
+      color: #666;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    /* Contact Section */
+    .contact-section {
+      padding: 60px 0;
+    }
+
+    .contact-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+
+    .form-card {
+      background-color: #fff;
+      border-radius: 12px;
+      padding: 40px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+      flex: 1;
+      min-width: 300px;
+    }
+
+    .form-title {
+      font-size: 1.8rem;
+      color: #2e7d32;
+      margin-bottom: 15px;
+    }
+
+    .form-description {
+      color: #666;
+      margin-bottom: 30px;
+      font-size: 1.05rem;
+    }
+
+    .form-group {
+      margin-bottom: 25px;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 600;
+      color: #444;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 14px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      font-family: 'Open Sans', sans-serif;
+      font-size: 1rem;
+      transition: border-color 0.3s;
+    }
+
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: #1565c0;
+      box-shadow: 0 0 0 3px rgba(21, 101, 192, 0.1);
+    }
+
+    .form-group textarea {
+      min-height: 120px;
+      resize: vertical;
+    }
+
+    .btn-submit {
+      background-color: #1565c0;
+      color: white;
+      border: none;
+      padding: 14px 32px;
+      font-size: 1.05rem;
+      font-weight: 600;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s, transform 0.2s;
+      width: 100%;
+    }
+
+    .btn-submit:hover {
+      background-color: #0d47a1;
+      transform: translateY(-2px);
+    }
+
+    .error-message {
+      color: #d32f2f;
+      font-size: 0.85rem;
+      margin-top: 5px;
+      display: none;
+    }
+
+    /* Map Section */
+    .map-section {
+      background-color: #fff;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+      margin-top: 30px;
+      height: 350px;
+    }
+
+    .map-container {
+      position: relative;
+      width: 100%;
+      height: 100%;
+    }
+
+    .map-container iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    /* Contact Info */
+    .contact-info {
+      padding: 50px 0;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+    }
+
+    .info-card {
+      background-color: #fff;
+      border-radius: 12px;
+      padding: 30px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+      transition: transform 0.3s;
+    }
+
+    .info-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .info-card h3 {
+      font-size: 1.4rem;
+      color: #2e7d32;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .info-card i {
+      color: #1565c0;
+      font-size: 1.3rem;
+    }
+
+    .info-card p {
+      color: #555;
+      line-height: 1.8;
+    }
+
+    .contact-links {
+      display: flex;
+      gap: 15px;
+      margin-top: 15px;
+    }
+
+    .contact-links a {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: #1565c0;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+
+    .contact-links a:hover {
+      color: #0d47a1;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 30px 0;
+      font-size: 0.9rem;
+    }
+
+    footer a {
+      color: #a5d6a7;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .form-card {
+        padding: 30px 20px;
+      }
+      
+      .form-title {
+        font-size: 1.6rem;
+      }
+      
+      .map-section {
+        height: 300px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .page-header {
+        padding: 40px 0 30px;
+      }
+      
+      .page-header h1 {
+        font-size: 1.8rem;
+      }
+      
+      .form-card {
+        padding: 25px 15px;
+      }
+      
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .map-section {
+        height: 250px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="page-header">
+    <div class="container">
+      <h1>Contact & Booking</h1>
+      <p>Get your home cleaned with just a few clicks</p>
+    </div>
+  </header>
+
+  <!-- Contact Section -->
+  <section class="contact-section">
+    <div class="container">
+      <div class="contact-container">
+        <!-- Booking Form -->
+        <div class="form-card">
+          <h2 class="form-title">Book Your Cleaning Today</h2>
+          <p class="form-description">Fill out the form, and we'll get back to you within 24 hours</p>
+          
+          <form id="booking-form" novalidate>
+            <div class="form-group">
+              <label for="name">Full Name <span style="color: #d32f2f;">*</span></label>
+              <input type="text" id="name" name="name" required>
+              <div class="error-message" id="name-error">Please enter your full name</div>
+            </div>
+            
+            <div class="form-group">
+              <label for="email">Email Address <span style="color: #d32f2f;">*</span></label>
+              <input type="email" id="email" name="email" required>
+              <div class="error-message" id="email-error">Please enter a valid email address</div>
+            </div>
+            
+            <div class="form-group">
+              <label for="phone">Phone Number <span style="color: #d32f2f;">*</span></label>
+              <input type="tel" id="phone" name="phone" required>
+              <div class="error-message" id="phone-error">Please enter a valid phone number</div>
+            </div>
+            
+            <div class="form-group">
+              <label for="address">Home Address <span style="color: #d32f2f;">*</span></label>
+              <input type="text" id="address" name="address" required>
+              <div class="error-message" id="address-error">Please enter your full address</div>
+            </div>
+            
+            <div class="form-group">
+              <label for="service">Service Type <span style="color: #d32f2f;">*</span></label>
+              <select id="service" name="service" required>
+                <option value="">Select a service</option>
+                <option value="standard">Standard Cleaning</option>
+                <option value="deep">Deep Cleaning</option>
+                <option value="move">Move-In/Out Cleaning</option>
+                <option value="eco">Eco-Friendly Cleaning</option>
+              </select>
+              <div class="error-message" id="service-error">Please select a service type</div>
+            </div>
+            
+            <div class="form-group">
+              <label for="date">Preferred Date <span style="color: #d32f2f;">*</span></label>
+              <input type="date" id="date" name="date" required>
+              <div class="error-message" id="date-error">Please select a date</div>
+            </div>
+            
+            <div class="form-group">
+              <label for="message">Additional Notes</label>
+              <textarea id="message" name="message" placeholder="Any special requests or instructions..."></textarea>
+            </div>
+            
+            <button type="submit" class="btn-submit">Submit Booking Request</button>
+          </form>
+        </div>
+        
+        <!-- Map Section -->
+        <div class="map-section">
+          <div class="map-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.142293808907!2d-73.98731968459474!3d40.74884097932822!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259a3f81d54b3%3A0x50b625c2b0d21d0!2sEmpire%20State%20Building!5e0!3m2!1sen!2sus!4v1626071873483!5m2!1sen!2sus" allowfullscreen="" loading="lazy"></iframe>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Contact Information -->
+      <div class="contact-info">
+        <div class="contact-grid">
+          <div class="info-card">
+            <h3><i class="fas fa-phone"></i> Phone</h3>
+            <p>(512) 555-7890</p>
+            <p>Mon-Fri: 8am - 6pm</p>
+            <p>Sat: 9am - 4pm</p>
+            <div class="contact-links">
+              <a href="tel:5125557890"><i class="fas fa-phone-alt"></i> Call Now</a>
+            </div>
+          </div>
+          
+          <div class="info-card">
+            <h3><i class="fas fa-envelope"></i> Email</h3>
+            <p>info@jvhomecleaning.com</p>
+            <p>Responses within 24 hours</p>
+            <p>24/7 online booking available</p>
+            <div class="contact-links">
+              <a href="mailto:info@jvhomecleaning.com"><i class="fas fa-envelope"></i> Email Us</a>
+            </div>
+          </div>
+          
+          <div class="info-card">
+            <h3><i class="fas fa-map-marker-alt"></i> Address</h3>
+            <p>123 Cleaning Street</p>
+            <p>Austin, TX 78701</p>
+            <p>Service area: Central Texas</p>
+            <div class="contact-links">
+              <a href="https://maps.google.com/?q=123+Cleaning+Street,Austin,TX" target="_blank">
+                <i class="fas fa-directions"></i> Get Directions
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2024 JV Home Cleaning Services. <a href="privacy.html">Privacy Policy</a></p>
+    </div>
+  </footer>
+
+  <!-- Form Validation Script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const form = document.getElementById('booking-form');
+      
+      form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        let isValid = true;
+        
+        // Name validation
+        const name = document.getElementById('name').value.trim();
+        if (name === '') {
+          showError('name-error', 'Please enter your full name');
+          isValid = false;
+        } else {
+          hideError('name-error');
+        }
+        
+        // Email validation
+        const email = document.getElementById('email').value.trim();
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (email === '') {
+          showError('email-error', 'Please enter your email address');
+          isValid = false;
+        } else if (!emailRegex.test(email)) {
+          showError('email-error', 'Please enter a valid email address');
+          isValid = false;
+        } else {
+          hideError('email-error');
+        }
+        
+        // Phone validation
+        const phone = document.getElementById('phone').value.trim();
+        const phoneRegex = /^[\d\s\-\(\)]{10,15}$/;
+        if (phone === '') {
+          showError('phone-error', 'Please enter your phone number');
+          isValid = false;
+        } else if (!phoneRegex.test(phone)) {
+          showError('phone-error', 'Please enter a valid phone number');
+          isValid = false;
+        } else {
+          hideError('phone-error');
+        }
+        
+        // Address validation
+        const address = document.getElementById('address').value.trim();
+        if (address === '') {
+          showError('address-error', 'Please enter your full address');
+          isValid = false;
+        } else {
+          hideError('address-error');
+        }
+        
+        // Service validation
+        const service = document.getElementById('service').value;
+        if (service === '') {
+          showError('service-error', 'Please select a service type');
+          isValid = false;
+        } else {
+          hideError('service-error');
+        }
+        
+        // Date validation
+        const date = document.getElementById('date').value;
+        if (date === '') {
+          showError('date-error', 'Please select a preferred date');
+          isValid = false;
+        } else {
+          hideError('date-error');
+        }
+        
+        // If valid, show success message (in real implementation would submit to server)
+        if (isValid) {
+          alert('Thank you for your booking request! We will contact you within 24 hours to confirm your appointment.');
+          form.reset();
+        }
+      });
+      
+      // Helper functions
+      function showError(elementId, message) {
+        const errorElement = document.getElementById(elementId);
+        errorElement.textContent = message;
+        errorElement.style.display = 'block';
+        document.getElementById(elementId.split('-')[0]).style.borderColor = '#d32f2f';
+      }
+      
+      function hideError(elementId) {
+        const errorElement = document.getElementById(elementId);
+        errorElement.style.display = 'none';
+        document.getElementById(elementId.split('-')[0]).style.borderColor = '#ddd';
+      }
+      
+      // Real-time validation
+      document.getElementById('name').addEventListener('blur', function() {
+        if (this.value.trim() === '') {
+          showError('name-error', 'Name is required');
+        }
+      });
+      
+      document.getElementById('email').addEventListener('blur', function() {
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (this.value.trim() === '') {
+          showError('email-error', 'Email is required');
+        } else if (!emailRegex.test(this.value.trim())) {
+          showError('email-error', 'Please enter a valid email');
+        }
+      });
+      
+      document.getElementById('phone').addEventListener('blur', function() {
+        const phoneRegex = /^[\d\s\-\(\)]{10,15}$/;
+        if (this.value.trim() === '') {
+          showError('phone-error', 'Phone number is required');
+        } else if (!phoneRegex.test(this.value.trim())) {
+          showError('phone-error', 'Please enter a valid phone number');
+        }
+      });
+    });
+  </script>
+</body>
+</html>
